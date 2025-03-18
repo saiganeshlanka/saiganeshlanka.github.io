@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saiganesh Lanka - Portfolio</title>
+    <title>Mohan Sri Saiganesh Lanka - Portfolio</title>
     <style>
         /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #2c2c2c;
+            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
             color: white;
         }
 
@@ -19,10 +19,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background: #1e1e1e;
+            background: rgba(26, 26, 26, 0.9);
             position: sticky;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         nav ul {
@@ -40,6 +41,11 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61; /* Highlight color */
         }
 
         .container {
@@ -48,6 +54,7 @@
             justify-content: center;
             height: 100vh;
             padding: 50px;
+            text-align: center;
         }
 
         .content {
@@ -57,36 +64,49 @@
         .content h1 {
             font-size: 48px;
             margin: 0 0 10px;
+            animation: fadeInDown 1s ease;
         }
 
         .content p {
             font-size: 20px;
             color: #bbbbbb;
+            animation: fadeInUp 1s ease;
         }
 
         .button {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background: #ffeb3b;
-            color: #1e1e1e;
+            background: #ff6f61; /* Highlight color */
+            color: white;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            animation: fadeInUp 1s ease;
+        }
+
+        .button:hover {
+            background: #ff4a3d; /* Darker highlight color */
+            transform: translateY(-5px);
         }
 
         .profile-img {
             width: 300px;
             border-radius: 10px;
             margin-right: 50px;
+            animation: fadeInLeft 1s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .about, .skills, .contact {
             text-align: center;
             padding: 50px;
-            background: #1e1e1e;
+            background: rgba(26, 26, 26, 0.9);
             margin: 20px 0;
+            border-radius: 10px;
+            animation: fadeInUp 1s ease;
         }
 
         .skills-grid {
@@ -102,6 +122,13 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: #ff6f61; /* Highlight color */
         }
 
         .skill-card h3 {
@@ -113,12 +140,13 @@
         }
 
         .contact a {
-            color: #ffeb3b;
+            color: #ff6f61; /* Highlight color */
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact a:hover {
-            text-decoration: underline;
+            color: #ff4a3d; /* Darker highlight color */
         }
 
         .hidden {
@@ -131,6 +159,7 @@
             padding: 20px;
             background: #333;
             border-radius: 10px;
+            animation: fadeInUp 1s ease;
         }
 
         .form-container input,
@@ -140,22 +169,63 @@
             margin: 10px 0;
             border: none;
             border-radius: 5px;
+            background: #444;
+            color: white;
         }
 
         .form-container button {
             width: 100%;
             padding: 10px;
-            background: #ffeb3b;
-            color: #1e1e1e;
+            background: #ff6f61; /* Highlight color */
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background: #ff4a3d; /* Darker highlight color */
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mohan sri saiganesh Lanka</h1>
+        <h1>Mohan Sri Saiganesh Lanka</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -170,7 +240,7 @@
     <section id="home" class="container">
         <img src="profile.jpg" alt="Profile Picture" class="profile-img">
         <div class="content">
-            <h1>My name is Mohan sri saiganesh Lanka.</h1>
+            <h1>My name is Mohan Sri Saiganesh Lanka.</h1>
             <p>I am currently a student at SASI Institute.</p>
             <a href="#contact" class="button">Contact Me</a>
         </div>
