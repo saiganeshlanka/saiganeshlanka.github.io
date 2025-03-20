@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohan Sri Saiganesh Lanka - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
         /* General Styles */
         body {
@@ -100,7 +105,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .about, .skills, .contact {
+        .about, .skills, .contact, .profiles {
             text-align: center;
             padding: 50px;
             background: rgba(26, 26, 26, 0.9);
@@ -109,7 +114,7 @@
             animation: fadeInUp 1s ease;
         }
 
-        .skills-grid {
+        .skills-grid, .profiles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
@@ -117,7 +122,7 @@
             max-width: 800px;
         }
 
-        .skill-card {
+        .skill-card, .profile-card {
             background: #333;
             padding: 20px;
             border-radius: 10px;
@@ -125,17 +130,17 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .skill-card:hover {
+        .skill-card:hover, .profile-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             background: #ff6f61; /* Highlight color */
         }
 
-        .skill-card h3 {
+        .skill-card h3, .profile-card h3 {
             margin: 0 0 10px;
         }
 
-        .skill-card p {
+        .skill-card p, .profile-card p {
             color: #bbbbbb;
         }
 
@@ -231,6 +236,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#profiles">Profiles</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -238,7 +244,7 @@
 
     <!-- Home Section -->
     <section id="home" class="container">
-        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        <img src="IMG-20250208-WA0051.jpg" alt="Profile Picture" class="profile-img">
         <div class="content">
             <h1>My name is Mohan Sri Saiganesh Lanka.</h1>
             <p>I am currently a student at SASI Institute.</p>
@@ -250,8 +256,11 @@
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>
-            Hello! I'm Saiganesh Lanka, a passionate Computer Science student specializing in Machine Learning and Data Science.
-            I love solving complex problems and building innovative solutions. Currently, I'm pursuing my studies at SASI Institute.
+            Hello! I'm Mohan sri saiganesh Lanka, a passionate Computer Science student specializing in Machine Learning and Data Science. I thrive on solving complex problems and developing innovative solutions that have real-world impact. Currently, I'm pursuing my studies at SASI Institute, where I continuously explore cutting-edge technologies, algorithms, and data-driven decision-making strategies.
+
+Beyond academics, I enjoy working on challenging projects, building intelligent systems, and leveraging data to uncover meaningful insights. I'm particularly interested in areas like deep learning, natural language processing, and predictive analytics. My goal is to create smart, efficient, and scalable solutions that contribute to technological advancements.
+
+Whether it's optimizing algorithms, developing AI-driven applications, or diving deep into datasets, I always seek opportunities to learn, innovate, and make a difference in the tech world!
         </p>
         <p>
             Feel free to explore my portfolio and reach out to me for collaborations or discussions!
@@ -281,11 +290,43 @@
         </div>
     </section>
 
+    <!-- Profiles Section -->
+    <section id="profiles" class="profiles">
+        <h2>Profiles</h2>
+        <div class="profiles-grid">
+            <div class="profile-card">
+                <i class="fas fa-code fa-3x"></i>
+                <h3>CodeChef</h3>
+                <p>Competitive Programming Profile</p>
+                <a href="https://www.codechef.com/users/saiganeshlanka" target="_blank" class="button">Visit Profile</a>
+            </div>
+            <div class="profile-card">
+                <i class="fas fa-laptop-code fa-3x"></i>
+                <h3>Hackerrank</h3>
+                <p>Participant in various hackathons</p>
+                <a href="https://www.hackerrank.com/profile/saiganesh_lanka" target="_blank" class="button">View Projects</a>
+            </div>
+                <!-- Add this to your Profiles section grid -->
+        <div class="profile-card">
+                 <i class="fab fa-github fa-3x"></i>
+                 <h3>GitHub</h3>
+                <p>Code Repositories & Contributions</p>
+                <a href="https://github.com/saiganeshlanka" target="_blank" class="button">View Profile </a>
+             </div>
+            <div class="profile-card">
+                <i class="fab fa-linkedin fa-3x"></i>
+                <h3>LinkedIn</h3>
+                <p>Professional Network</p>
+                <a href="https://www.linkedin.com/in/saiganesh-lanka-b0bb8529b/" target="_blank" class="button">Connect</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:saiganesh.lanka@sasi.ac.in">saiganesh.lanka@sasi.ac.in</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/saiganesh-lanka-b0bb8529b/" target="_blank">linkedin.com/in/saiganesh-lanka-b0bb8529b</a></p>
+        <p>Phone No:<a href="#">9515436758</a></p>
         <button id="showFormButton" class="button">Send a Message</button>
         <div id="contactForm" class="form-container hidden">
             <form id="messageForm">
@@ -297,6 +338,9 @@
         </div>
     </section>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
